@@ -1,0 +1,324 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background: #151515;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e21b2d;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #e21b2d;
+}
+
+/* Home Hero */
+
+.hero {
+    min-height: 500px;
+    background:
+        linear-gradient(rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)),
+        url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1600")
+        center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #e21b2d;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background: #e21b2d;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b51220;
+    transform: translateY(-2px);
+}
+
+/* Sections */
+
+.welcome,
+.featured,
+.why-us,
+.about,
+.contact {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #151515;
+}
+
+.welcome p,
+.about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 17px;
+}
+
+/* Bike Cards */
+
+.featured {
+    background: white;
+}
+
+.bike-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.bike-card {
+    background: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.bike-card:hover {
+    transform: translateY(-7px);
+}
+
+.bike-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.bike-card h3 {
+    margin: 15px 0 8px;
+    color: #e21b2d;
+}
+
+.bike-card h4 {
+    margin: 12px 0;
+}
+
+/* Why Choose Us */
+
+.why-us {
+    background: #151515;
+    color: white;
+}
+
+.why-us h2 {
+    color: white;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.features div {
+    background: #e21b2d;
+    padding: 22px 10px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+/* Page Heading */
+
+.page-heading {
+    background: #151515;
+    color: white;
+    text-align: center;
+    padding: 60px 15px;
+}
+
+.page-heading h1 {
+    color: #e21b2d;
+    font-size: 40px;
+}
+
+.page-heading p {
+    font-size: 17px;
+}
+
+/* Contact */
+
+.contact {
+    background: white;
+}
+
+.contact-info {
+    margin: 25px auto;
+    max-width: 500px;
+    text-align: left;
+    line-height: 2.2;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#formMessage {
+    color: green;
+    margin-top: 15px;
+}
+
+/* Footer */
+
+footer {
+    background: #151515;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .bike-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .bike-container {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
